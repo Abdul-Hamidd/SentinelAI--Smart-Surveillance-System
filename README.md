@@ -8,48 +8,10 @@ An enterprise-grade, **AI-powered smart surveillance and automated response syst
 
 This system integrates spatial frame-level object detectors with temporal video classification networks into a synchronized real-time processing pipeline:
 
-              ┌───────────────────────────────┐
-              │       Live Camera Feed        │
-              └───────────────┬───────────────┘
-                              │ (OpenCV Frame Stream)
-                              ▼
-              ┌───────────────────────────────┐
-              │    Frame Pre-Processing &     │
-              │       Skipping Logic          │
-              └───────────────┬───────────────┘
-                              │
-     ┌────────────────────────┴────────────────────────┐
-     ▼ (Spatial Stream)                                ▼ (Temporal Stream)
-┌─────────────────────────────────┐               ┌─────────────────────────────────┐
-│     YOLOv8s Weapon Detector     │               │   SlowFast R50 Video Network    │
-│    (Classes: Gun, Knife, etc.)  │               │      (32-Frame Buffer)          │
-├─────────────────────────────────┤               ├─────────────────────────────────┤
-│    YOLOv8n Fire & Smoke Core    │               │    Action Recognition Engine    │
-│    (Classes: Fire, Smoke)       │               │    (Classes: Fight / Non-Fight) │
-└────────────────┬────────────────┘               └────────────────┬────────────────└
-│                                                 │
-└────────────────────────┬────────────────────────┘
-│ (Consolidated Threat Flags)
-▼
-┌───────────────────────────────┐
-│    Dynamic Thread Manager     │
-│   & Video Clip Buffer (IoU)   │
-└───────────────┬───────────────┘
-│
-▼
-┌───────────────────────────────┐
-│      Local LLM (Ollama)       │
-│  (Context-Aware Text Synthesis)│
-└───────────────┬───────────────┘
-│
-▼
-┌───────────────────────────────┐
-│       Gmail API Gateway       │
-│  (Instant Alert + MP4 Attachment)
-└───────────────────────────────┘
+              <p align="center">
+  <img src="sentineai-architecture-pipeline.png" alt="SentineAI Architecture Pipeline" width="100%">
+</p>
 
-
----
 
 ## 🚀 Key Technical Features
 
