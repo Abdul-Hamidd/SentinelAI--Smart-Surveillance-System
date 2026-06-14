@@ -8,9 +8,7 @@ An enterprise-grade, **AI-powered smart surveillance and automated response syst
 
 This system integrates spatial frame-level object detectors with temporal video classification networks into a synchronized real-time processing pipeline:
 
-              <p align="center">
-  <img src="sentineai-architecture-pipeline.png" alt="SentineAI Architecture Pipeline" width="100%">
-</p>
+![SentineAI Architecture Pipeline](sentineai-architecture-pipeline.png)
 
 
 ## 🚀 Key Technical Features
